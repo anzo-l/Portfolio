@@ -1,0 +1,164 @@
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f3f4f6, #e4e5e9);
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0078d7, #0056a1);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+header .intro h1 {
+    font-size: 4em;
+    margin: 0;
+    animation: fadeInDown 1s ease;
+}
+header .intro p {
+    margin: 10px 0;
+    font-size: 1.5em;
+    animation: fadeInUp 1.5s ease;
+}
+header .btn {
+    margin-top: 20px;
+    background: white;
+    color: #0078d7;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+header .btn:hover {
+    background: #f2f2f2;
+    transform: translateY(-5px);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: rgba(51, 51, 51, 0.9);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+nav ul li a:hover {
+    background: #575757;
+    transform: scale(1.1);
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(50px); /* Initial state for animation */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 40px;
+    animation: slideInLeft 0.8s ease;
+}
+.timeline-item span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #0078d7;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Keyframes pour animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
